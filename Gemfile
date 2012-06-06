@@ -26,7 +26,13 @@ gem 'sqlite3', '1.3.3'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-group :development, :test do
+group :development do
   gem 'rspec-rails', '2.6.1'
-   gem 'webrat', '0.7.1'
+end
+
+group :test do
+  gem 'rspec-rails', '2.6.1'
+  gem 'webrat', '0.7.1'
+  gem install 'autotest-notification', '2.3.4'
+
 end
